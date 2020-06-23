@@ -134,7 +134,10 @@
         alert("I've been clicked!");
       });
       $("#button-clear").on("click", function () {
-        alert("I've been clicked!");
+        $("#first-number").empty();
+        $("#operator").empty();
+        $("#second-number").empty();
+        $("#result").empty();
       });
 
     });
