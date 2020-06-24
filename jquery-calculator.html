@@ -81,7 +81,7 @@
       var numFlag = 0;
       var operatorFlag = '';
       var firstNumber = '';
-      var secondNumber;
+      var secondNumber = '';
       // Your code here...
       $("#button-1").on("click", function () {
         value = $(this).attr("value");
@@ -125,27 +125,27 @@
       });
       $("#button-plus").on("click", function () {
         operatorFlag = $(this).attr("value");
-        numbers(operatorFlag);
+        operator(operatorFlag);
 
       });
       $("#button-minus").on("click", function () {
         operatorFlag = $(this).attr("value");
-        numbers(operatorFlag);
+        operator(operatorFlag);
 
       });
       $("#button-multiply").on("click", function () {
         operatorFlag = $(this).attr("value");
-        numbers(operatorFlag);
+        operator(operatorFlag);
 
       });
       $("#button-divide").on("click", function () {
         operatorFlag = $(this).attr("value");
-        numbers(operatorFlag);
+        operator(operatorFlag);
 
       });
       $("#button-power").on("click", function () {
         operatorFlag = $(this).attr("value");
-        numbers(operatorFlag);
+        operator(operatorFlag);
 
       });
       $("#button-equal").on("click", function () {
@@ -198,7 +198,7 @@
       }
       
         function operator(op) {
-        numFlag == 1;
+        numFlag = 1;
         if (op === "plus") {
           $("#operator").text("+");
         }
