@@ -79,64 +79,103 @@
 
     $(document).ready(function () {
       var numFlag = 0;
-      var operatorFlag = 0;
-      var firstNumber;
+      var operatorFlag = '';
+      var firstNumber = '';
       var secondNumber;
       // Your code here...
       $("#button-1").on("click", function () {
-        
+        value = $(this).attr("value");
         numbers(value);
       });
       $("#button-2").on("click", function () {
-        alert("I've been clicked!");
+        value = $(this).attr("value");
+        numbers(value);
       });
       $("#button-3").on("click", function () {
-        alert("I've been clicked!");
+        value = $(this).attr("value");
+        numbers(value);
       });
       $("#button-4").on("click", function () {
-        alert("I've been clicked!");
+        value = $(this).attr("value");
+        numbers(value);
       });
       $("#button-5").on("click", function () {
-        alert("I've been clicked!");
+        value = $(this).attr("value");
+        numbers(value);
       });
       $("#button-6").on("click", function () {
-        alert("I've been clicked!");
+        value = $(this).attr("value");
+        numbers(value);
       });
       $("#button-7").on("click", function () {
-        alert("I've been clicked!");
+        value = $(this).attr("value");
+        numbers(value);
       });
       $("#button-8").on("click", function () {
-        alert("I've been clicked!");
+        value = $(this).attr("value");
+        numbers(value);
       });
       $("#button-9").on("click", function () {
-        alert("I've been clicked!");
+        value = $(this).attr("value");
+        numbers(value);
       });
       $("#button-0").on("click", function () {
-        alert("I've been clicked!");
+        operatorFlag = $(this).attr("value");
+        numbers(operatorFlag);
       });
       $("#button-plus").on("click", function () {
-        alert("I've been clicked!");
-        numFlag++;
+        operatorFlag = $(this).attr("value");
+        numbers(operatorFlag);
+
       });
       $("#button-minus").on("click", function () {
-        alert("I've been clicked!");
-        numFlag++;
+        operatorFlag = $(this).attr("value");
+        numbers(operatorFlag);
+
       });
       $("#button-multiply").on("click", function () {
-        alert("I've been clicked!");
-        numFlag++;
+        operatorFlag = $(this).attr("value");
+        numbers(operatorFlag);
+
       });
       $("#button-divide").on("click", function () {
-        alert("I've been clicked!");
-        numFlag++;
+        operatorFlag = $(this).attr("value");
+        numbers(operatorFlag);
+
       });
       $("#button-power").on("click", function () {
-        alert("I've been clicked!");
-        numFlag++;
+        operatorFlag = $(this).attr("value");
+        numbers(operatorFlag);
+
       });
       $("#button-equal").on("click", function () {
-        //calculates the result
-        alert("I've been clicked!");
+        //calculates the result  
+        var fN = parseFloat(firstNumber);
+        var sN = parseFloat(secondNumber);
+        var result;
+        if (operatorFlag === "plus") {
+          result = fN + sN;
+          $("#result").text(result);
+        }
+        else if (operatorFlag === "minus") {
+          result = fN - sN;
+          $("#result").text(result)
+        }
+        else if (operatorFlag === "times") {
+          result = fN * sN;
+          $("#result").text(result)
+        }
+        else if (operatorFlag === "divide") {
+          result = fN / sN;
+          $("#result").text(result)
+        }
+        else if (operatorFlag === "power") {
+          result = Math.pow(firstNumber, secondNumber);
+          $("#result").text(result)
+        }
+        else {
+          alert("Error!")
+        }
       });
       $("#button-clear").on("click", function () {
         $("#first-number").empty();
@@ -145,12 +184,39 @@
         $("#result").empty();
         firstNumber = '';
         secondNumber = '';
+        numFlag = 0;
       });
-      //function to add the numbers
-      function number(num);
+      function numbers(num) {
+        //function to add the numbers  
+        if (numFlag === 0) {
+          firstNumber = firstNumber + num
+          $("#first-number").html(firstNumber)
+        } else {
+          secondNumber = secondNumber + num
+          $("#second-number").html(secondNumber)
+        }
+      }
+      
+        function operator(op) {
+        numFlag == 1;
+        if (op === "plus") {
+          $("#operator").text("+");
+        }
+        else if (op === "minus") {
+          $("#operator").text("-");
+        }
+        else if (op === "times") {
+          $("#operator").text("*");
+        }
+        else if (op === "divide") {
+          $("#operator").text("/");
+        }
+        else if (op === "power") {
+          $("#operator").text("^");
+        }
+      }
 
-      //function to add operator and switch to second number
-      function operator(op);
+      
 
     });
 
