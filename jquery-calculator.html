@@ -79,6 +79,9 @@
 
     $(document).ready(function () {
       var numFlag = 0;
+      var operatorFlag = 0;
+      var firstNumber;
+      var secondNumber;
       // Your code here...
       $("#button-1").on("click", function () {
         alert("I've been clicked!");
@@ -138,6 +141,8 @@
         $("#operator").empty();
         $("#second-number").empty();
         $("#result").empty();
+        firstNumber = '';
+        secondNumber = '';
       });
 
     });
