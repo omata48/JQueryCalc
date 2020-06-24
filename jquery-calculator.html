@@ -120,8 +120,8 @@
         numbers(value);
       });
       $("#button-0").on("click", function () {
-        operatorFlag = $(this).attr("value");
-        numbers(operatorFlag);
+        value = $(this).attr("value");
+        numbers(value);
       });
       $("#button-plus").on("click", function () {
         operatorFlag = $(this).attr("value");
@@ -172,9 +172,6 @@
         else if (operatorFlag === "power") {
           result = Math.pow(firstNumber, secondNumber);
           $("#result").text(result)
-        }
-        else {
-          alert("Error!")
         }
       });
       $("#button-clear").on("click", function () {
